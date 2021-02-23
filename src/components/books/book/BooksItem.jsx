@@ -4,8 +4,7 @@ import book from '../../../img/book.png';
 
 
 
-let Book = () => {
-
+let BooksItem = (props) => {
 
     return (
         <div className={style.bookContainer}>
@@ -14,10 +13,10 @@ let Book = () => {
                 
             </div>
             <div className={style.info}>
-                <p>name: <span>Name</span></p>
-                <p>category: <span>Category</span></p>
-                <p>price: $<span>10</span></p>
-                <p>description: <span>description</span></p>
+                <p>name: <span>{props.name}</span></p>
+                <p>category: <span>{props.category}</span></p>
+                <p>price: $<span>{props.price}</span></p>
+                <p>description: <span>{props.description}</span></p>
             </div>
             <div className={style.deleteBtn}>
                 <button>delete</button>
@@ -26,4 +25,4 @@ let Book = () => {
     )
 }
 
-export default Book;
+export default BooksItem;

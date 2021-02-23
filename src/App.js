@@ -1,13 +1,13 @@
 import './App.css';
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
-import Books from "./components/books/Books";
+import BooksContainer from "./components/books/BooksContainer";
 
 function App() {
     return (
         <div>
             <Header/>
-            <Books />
+            <BooksContainer />
             <Footer/>
         </div>
 
