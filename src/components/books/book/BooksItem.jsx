@@ -6,9 +6,17 @@ import book from '../../../img/book.png';
 
 let BooksItem = (props) => {
 
+    let onDeleteBtnClick = () => {
+        alert('Deleted');
+    }
+
+    let onBookImgClick = () => {
+        alert('Book clicked');
+    }
+
     return (
         <div className={style.bookContainer}>
-            <div className={style.bookImage}>
+            <div onClick={onBookImgClick} className={style.bookImage}>
                 <img  src={book} alt={'book'}/>
                 
             </div>
@@ -19,7 +27,7 @@ let BooksItem = (props) => {
                 <p>description: <span>{props.description}</span></p>
             </div>
             <div className={style.deleteBtn}>
-                <button>delete</button>
+                <button onClick={onDeleteBtnClick}>delete</button>
             </div>
         </div>
     )
